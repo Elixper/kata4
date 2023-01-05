@@ -37,3 +37,20 @@ function alphabetPosition(text) {
 console.log(alphabetPosition("The sunset sets at twelve o' clock."))
 console.log(alphabetPosition("eq)[<0n("))
 console.log(alphabetPosition("qfk})>8:"))
+
+
+function alphabetPosition2(text) {
+  let newText = text.toLowerCase();
+  let alphaOrder= "";
+  let alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+   for (let i =0;i < newText.length; i++) {
+    if (alphabet.includes(newText[i])) {
+      alphaOrder += alphabet.indexOf(newText[i]) + 1 + " "
+    }
+   }
+ return alphaOrder.substring(0,alphaOrder.length-1);
+}
+
+console.log(alphabetPosition2("ab :$ba"))
+
+console.log(alphabetPosition2("The sun%2r+vf^i"))
